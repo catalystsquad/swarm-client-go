@@ -10,15 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: crazy-max/ghaction-dump-context@v1
-      - uses: amannn/action-semantic-pull-request@v3.4.6
-        with:
-          types: |
-            fix
-            feat
-            norelease
-          validateSingleCommit: true
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
+      - uses: catalystsquad/action-validate-conventional-commits-pr@v1
   test:
     if: github.event.pull_request.draft == false
     name: Test
