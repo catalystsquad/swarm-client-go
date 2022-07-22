@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/catalystsquad/swarm-client-go/compare/v1.1.0...v1.1.1) (2022-07-22)
+
+
+### Bug Fixes
+
+* webhook update by id ([#4](https://github.com/catalystsquad/swarm-client-go/issues/4)) ([ddfc731](https://github.com/catalystsquad/swarm-client-go/commit/ddfc731c694d60efe8f1ba35bbc1fa07fcf5e344))
+
 # [1.1.0](https://github.com/catalystsquad/swarm-client-go/compare/v1.0.0...v1.1.0) (2022-07-22)
 
 
