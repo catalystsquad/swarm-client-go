@@ -100,14 +100,14 @@ func TestWebhookActions_Update(t *testing.T) {
 	client, mux, teardown := setup()
 	defer teardown()
 
-	mux.HandleFunc("/authenticated/webhookactions", func(w http.ResponseWriter, r *http.Request) {
+	mux.HandleFunc("/authenticated/webhookactions/", func(w http.ResponseWriter, r *http.Request) {
 		require.Equal(t, "PUT", r.Method)
 		require.Contains(t, r.Header, "Authorization")
 		fmt.Fprint(w, testWebhookActionJSON)
 	})
 
 	ctx := context.Background()
-	got, _, err := client.WebhookActions.Update(ctx, testWebhookActionObj)
+	got, _, err := client.WebhookActions.Update(ctx, testWebhookActionID, testWebhookActionObj)
 
 	require.NoError(t, err)
 	require.Equal(t, testWebhookActionObj, got)

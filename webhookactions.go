@@ -81,8 +81,9 @@ func (s *WebhookActionsService) Create(ctx context.Context, i *WebhookAction) (*
 }
 
 // Update an action webhook
-func (s *WebhookActionsService) Update(ctx context.Context, i *WebhookAction) (*WebhookAction, *http.Response, error) {
-	req, err := s.client.NewRequestWithBaseURL("PUT", actionWebhookPath, i)
+func (s *WebhookActionsService) Update(ctx context.Context, webhookID string, i *WebhookAction) (*WebhookAction, *http.Response, error) {
+	path := fmt.Sprintf("%s/%s", actionWebhookPath, webhookID)
+	req, err := s.client.NewRequestWithBaseURL("PUT", path, i)
 	if err != nil {
 		return nil, nil, err
 	}
