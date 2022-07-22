@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/catalystsquad/swarm-client-go/compare/v1.0.0...v1.1.0) (2022-07-22)
+
+
+### Features
+
+* implement publish by name, safely escape query parameters ([#3](https://github.com/catalystsquad/swarm-client-go/issues/3)) ([2462f8e](https://github.com/catalystsquad/swarm-client-go/commit/2462f8ee3aeda1c3a3c0147e5ed9815475f3b0d3))
+
 # 1.0.0 (2022-07-07)
 
 
